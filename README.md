@@ -1,2 +1,2 @@
-# 3-webgl-slider
-Fully animated WebGL slider
+# WebGL Slider & Card Design & Animations
+Fully animated WebGL slider and cards

@@ -1,0 +1,105 @@
+.loader_wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.9);
+    display: grid;
+    place-items: center;
+    transition: .3s all ease-in-out
+}
+
+.loader {
+    width:50px;
+    height:50px;
+    display:inline-block;
+    padding:0px;
+    opacity:0.5;
+    border:3px solid #09acfd;
+    -webkit-animation: loader 1s ease-in-out infinite alternate;
+    animation: loader 1s ease-in-out infinite alternate;
+}
+
+.loader:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 3px solid #09acfd;
+}
+
+.loader:after {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 3px solid #09acfd;
+}
+
+@keyframes loader {
+    from {transform: rotate(0deg) scale(1,1);border-radius:0px;}
+    to {transform: rotate(360deg) scale(0, 0);border-radius:50px;}
+}
+@-webkit-keyframes loader {
+    from {-webkit-transform: rotate(0deg) scale(1, 1);border-radius:0px;}
+    to {-webkit-transform: rotate(360deg) scale(0,0 );border-radius:50px;}
+}
+
+.loader1 {
+    display:inline-block;
+    font-size:0px;
+    padding:0px;
+}
+.loader1 span {
+    vertical-align:middle;
+    border-radius:100%;
+
+    display:inline-block;
+    width:20px;
+    height:20px;
+    margin:3px 2px;
+    -webkit-animation:loader1 0.8s linear infinite alternate;
+    animation:loader1 0.8s linear infinite alternate;
+}
+.loader1 span:nth-child(1) {
+    -webkit-animation-delay:-1s;
+    animation-delay:-1s;
+    background:rgba(3, 87, 98, .6);
+}
+.loader1 span:nth-child(2) {
+    -webkit-animation-delay:-0.8s;
+    animation-delay:-0.8s;
+    background:rgba(3, 87, 98, .8);
+}
+.loader1 span:nth-child(3) {
+    -webkit-animation-delay:-0.26666s;
+    animation-delay:-0.26666s;
+    background:rgba(3, 87, 98, 1);
+}
+.loader1 span:nth-child(4) {
+    -webkit-animation-delay:-0.8s;
+    animation-delay:-0.8s;
+    background:rgba(3, 87, 98, 1);
+}
+.loader1 span:nth-child(5) {
+    -webkit-animation-delay:-1s;
+    animation-delay:-1s;
+    background:rgba(3, 87, 98, .6);
+}
+
+@keyframes loader1 {
+    from {transform: scale(0, 0);}
+    to {transform: scale(1, 1);}
+}
+@-webkit-keyframes loader1 {
+    from {-webkit-transform: scale(0, 0);}
+    to {-webkit-transform: scale(1, 1);}
+}

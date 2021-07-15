@@ -1,0 +1,314 @@
+/* variables & fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+main{
+
+    --primary: #035762;
+    --secondary: #6ce99b;
+    --tersiary: #3fd0c9;
+    --max-radius: 5px;
+    --min-radius: 2px;
+
+}
+
+/* globals */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif !important;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a{
+    transition: .09s all ease-in-out !important;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: block !important
+}
+
+/* slider */
+.rgbKineticSlider {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    position: absolute;
+    display : block;
+    top:0;
+    left : 0;
+}
+
+.content>nav>a{
+    font-size: 20px !important
+}
+.content nav a {
+    color: var(--color-link-hover);
+    opacity: .7;
+    text-decoration: none;
+    position: absolute;
+    top: 50vh;
+    z-index: 1;
+}
+
+.content nav a:hover,
+.content nav a:focus {
+    color: var(--color-link-hover);
+    outline: none;
+    opacity: 1;
+}
+
+.content nav span {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-link-hover);
+    display: block;
+    margin-top: 7px;
+    -moz-transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+}
+
+.content nav a:hover span {
+    width: 0;
+}
+
+.content nav a.next {
+    right: 8rem;
+}
+
+.content nav a.prev {
+    left: 8rem;
+}
+
+.content .notice {
+    text-decoration: none;
+    position: absolute;
+    bottom: 2rem;
+    left: 3rem;
+    z-index: 1;
+    color: var(--color-link);
+}
+
+@media screen and (max-width: 53em) {
+    .content nav a {
+        top : auto;
+        bottom : 3rem;
+    }
+
+    .content .notice {
+        bottom: auto;
+        top: 2rem;
+        left : 10vw;
+        left: 3rem;
+    }
+}
+
+/* animation */
+.welcome_animation{
+    width: 100vw;
+    height: 100vh;
+}
+.welcome_animation .animation_content{
+    /* background: #6ce99b; */
+    background: #3fd0c9;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+}
+.welcome_animation .animation_clip{
+    background: #6ce99b;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+}
+
+.welcome_animation h1{
+    font: 500 normal 36px -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Helvetica, sans-serif !important;
+    color: white;
+}
+
+/* header */
+header.navigation a.active{
+    color: white;
+    opacity: 1;
+}
+
+header.navigation{
+    padding: 2rem 8rem;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+}
+
+header .logo>ul>li,
+header .nav>ul>li,
+header .social>ul>li{
+    text-transform: uppercase !important;
+    font: 400 normal 12px -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Helvetica, sans-serif !important;
+}
+
+header .logo>ul>li{
+    text-transform: initial !important;
+    font: 500 normal 16px -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Helvetica, sans-serif !important;
+}
+
+header.navigation>.nav_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(255 255 255 / 40%);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+header.navigation>.snav_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.navigation nav>ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header.navigation nav>ul>li{
+    margin-right: 40px;
+    color: white;
+}
+
+header.navigation>.nav_wrapper .menu>ul>li:last-child,
+header.navigation>.snav_wrapper .nav>ul>li:last-child{
+    margin-right: 0px;
+}
+
+/* cards */
+section.cards{
+    padding: 0rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section.cards .card{
+    width: 300px;
+    height: 350px;
+    background: rgb(223, 199, 199);
+    color: white !important;
+    /* border-radius: var(--max-radius) !important; */
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+    /* border-bottom: 10px solid var(--secondary); */
+    transition: .1s all ease-in-out;
+}
+section.cards .card *{
+    transition: .1s all ease-in-out;
+}
+
+section.cards .card .card_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.cards .card .card_header,
+section.cards .card .card_footer{
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    padding: 2rem;
+    font: 400 normal 14px -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Helvetica, sans-serif !important;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+
+section.cards .card .card_footer{
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: -webkit-linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+section.cards .card:nth-child(1){
+    background: url(../img/card-1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translateY(-10%)
+}
+section.cards .card:nth-child(2){
+    background: url(../img/card-2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translateY(-20%)
+}
+section.cards .card:nth-child(3){
+    background: url(../img/card-3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translateY(-30%)
+}
+
+section.cards .card h4{
+    font: 500 normal 13px -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Helvetica, sans-serif !important;
+}
+section.cards .card p{
+    font: 400 normal 13px -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Helvetica, sans-serif !important;
+}
+
+section.cards .card .card_hide{
+    margin-top: 20px;
+    transition: .3s all ease-in-out;
+    text-transform: initial !important;
+    text-align: right !important;
+}
+
+section.cards .card .card_hide h4{
+    font: 500 normal 18px -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Helvetica, sans-serif !important;
+    margin-bottom: 20px !important;
+}
+section.cards .card .card_hide p{
+    font: 400 normal 13px -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Helvetica, sans-serif !important;
+    margin-bottom: 10px;
+}
+
+section.cards .card .card_hide small{
+    font: 400 normal 13px -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Helvetica, sans-serif !important;
+    opacity: .8
+}

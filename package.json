@@ -1,0 +1,24 @@
+{
+  "name": "3-webgl-slider",
+  "version": "1.0.0",
+  "description": "Fully animated WebGL slider",
+  "main": "index.js",
+  "module": "commonjs",
+  "dependencies": {
+    "gsap": "^3.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FortiFyed/3-webgl-slider.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FortiFyed/3-webgl-slider/issues"
+  },
+  "homepage": "https://github.com/FortiFyed/3-webgl-slider#readme"
+}
