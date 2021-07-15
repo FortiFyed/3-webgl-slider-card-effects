@@ -7,5 +7,5 @@ Fully animated WebGL slider and cards
 
 # Info
 
-Slider style repo https://github.com/hmongouachon/rgbKineticSlider
-Card hover effect repo https://github.com/robin-dela/hover-effect
+- Slider style repo https://github.com/hmongouachon/rgbKineticSlider
+- Card hover effect repo https://github.com/robin-dela/hover-effect
